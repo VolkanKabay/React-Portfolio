@@ -101,7 +101,7 @@ const NavigationBar = () => {
             Projects
           </motion.a>
           <motion.a
-            href="/contact"
+            href="mailto:volkankabay@gmail.com"
             variants={linkVariants}
             whileHover="hover"
             className="nav-link"
