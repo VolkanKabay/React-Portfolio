@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Divider, Typography } from "@mui/material";
 import NavigationBar from "./NavigationBar";
 import { motion } from "framer-motion";
 
@@ -54,6 +54,31 @@ const Skills = () => {
           text="Material-UI"
         />
       </Box>
+      <Divider sx={{ marginTop: "10%", backgroundColor: "#ebdddd" }} />
+
+      <Box
+        sx={{
+          display: "flex",
+          marginTop: "10%",
+        }}
+      >
+        <motion.text
+          style={{
+            color: "#ebdddd",
+            fontSize: 30,
+            fontWeight: 400,
+            marginBottom: "10%",
+          }}
+          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 0 }}
+          transition={{ delay: 0.25, duration: 1.5 }}
+        >
+          <b>Disclaimer: </b> <br /> Obviously I'm not a experienced developer
+          yet, so I'm not a master in any of these technologies. But I'm trying
+          to improve myself and learn new things about these technologies
+          everyday.
+        </motion.text>
+      </Box>
     </Container>
   );
 };
@@ -84,7 +109,7 @@ const SkillBox = ({
         alt={alt}
         style={{ width: "50%", height: "100%" }}
       />
-      <Typography variant="h4" sx={{ textAlign: "center", color: "#ebdddd" }}>
+      <Typography sx={{ textAlign: "center", color: "#ebdddd" }} fontSize={40}>
         {text}
       </Typography>
     </Box>
