@@ -4,19 +4,17 @@ import NavigationBar from "./NavigationBar";
 
 function App() {
   return (
-    <>
-      <Container
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          marginTop: "2%",
-          height: "100vh",
-        }}
-      >
-        <NavigationBar />
-        <AnimatedWelcome />
-      </Container>
-    </>
+    <Container
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        marginTop: "2%",
+        height: "100vh",
+      }}
+    >
+      <NavigationBar />
+      <AnimatedWelcome />
+    </Container>
   );
 }
 
