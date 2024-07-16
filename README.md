@@ -1,2 +1,3 @@
 # Portfolio
- My personal Portfolio, built using React via Vite.
+
+My personal Portfolio, built from scratch using React via Vite.
