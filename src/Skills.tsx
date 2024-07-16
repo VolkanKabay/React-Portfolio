@@ -28,13 +28,13 @@ const Skills = () => {
           marginTop: "5%",
         }}
       >
-        <SkillBox imageSrc="../src/assets/react.svg" alt="React" text="React" />
+        <SkillBox imageSrc="./react.svg" alt="React" text="React" />
         <SkillBox
-          imageSrc="../src/assets/typescript.svg"
+          imageSrc="./typescript.svg"
           alt="TypeScript"
           text="TypeScript"
         />
-        <SkillBox imageSrc="../src/assets/redux.svg" alt="Redux" text="Redux" />
+        <SkillBox imageSrc="./redux.svg" alt="Redux" text="Redux" />
       </Box>
       <Box
         sx={{
@@ -44,15 +44,11 @@ const Skills = () => {
         }}
       >
         <SkillBox
-          imageSrc="../src/assets/javascript.svg"
+          imageSrc="./javascript.svg"
           alt="JavaScript"
           text="JavaScript"
         />
-        <SkillBox
-          imageSrc="../src/assets/mui.svg"
-          alt="Material-UI"
-          text="Material-UI"
-        />
+        <SkillBox imageSrc="./mui.svg" alt="Material-UI" text="Material-UI" />
       </Box>
       <Divider sx={{ marginTop: "10%", backgroundColor: "#ebdddd" }} />
 
