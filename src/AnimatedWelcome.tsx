@@ -4,7 +4,7 @@ const AnimatedWelcome = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
-  const text1 = "Hi,👋 ".split("");
+  const text1 = "Hi,👋".split("");
   const text2 = "My name is".split("");
   const text3 = "Volkan";
   const text4 = "I am a Frontend Developer.".split("");
@@ -136,7 +136,6 @@ const AnimatedWelcome = () => {
           width: "16rem",
           margin: "auto",
           padding: "1rem",
-          color: "white",
           height: "4rem",
           border: "none",
           fontSize: "1.4rem",
