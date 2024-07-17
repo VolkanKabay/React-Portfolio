@@ -142,7 +142,7 @@ const About = () => {
             opacity: 0.7,
           }}
         >
-          12.2023 - 05.2024
+          12.2022 - 05.2024
         </Typography>
         <Divider
           sx={{
