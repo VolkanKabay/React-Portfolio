@@ -18,7 +18,7 @@ const About = () => {
           flexDirection: "column",
           justifyContent: "start",
           alignItems: "start",
-          marginTop: "10%",
+          marginTop: "15%",
         }}
       >
         <Typography

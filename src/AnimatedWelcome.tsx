@@ -137,6 +137,7 @@ const AnimatedWelcome = () => {
         style={{
           width: "16rem",
           margin: "auto",
+          marginBottom: "2rem",
           padding: "1rem",
           color: "white",
           height: "4rem",

@@ -70,7 +70,7 @@ const Skills = () => {
       </Grid>
       <Divider sx={{ backgroundColor: "#ebdddd" }} />
 
-      <Box sx={{ marginTop: "5%" }}>
+      <Box sx={{ marginTop: "5%", marginBottom: "10%" }}>
         <motion.div
           style={{
             color: "#ebdddd",
