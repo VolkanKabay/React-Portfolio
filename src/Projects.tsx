@@ -1,7 +1,6 @@
 import { Box, Container } from "@mui/material";
 import NavigationBar from "./NavigationBar";
 import { motion } from "framer-motion";
-import Footer from "./Footer";
 
 const Projects = () => {
   const projects = [
