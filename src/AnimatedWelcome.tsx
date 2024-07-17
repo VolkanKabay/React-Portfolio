@@ -126,25 +126,24 @@ const AnimatedWelcome = () => {
       </Box>
 
       <motion.button
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        initial={{ opacity: 0, y: 0 }}
+        animate={{ opacity: 1, y: 15 }}
         transition={{ delay: 4, duration: 1.5 }}
         onClick={() => {
           window.location.href = "/projects";
         }}
-        className="animation-button"
         style={{
           width: "16rem",
           margin: "auto",
           padding: "1rem",
           height: "4rem",
-          fontSize: "1.4rem",
-          background: "-webkit-linear-gradient(45deg, #FD297B, #FF655B)",
-          color: "white",
           border: "none",
+          fontSize: "1.4rem",
+          background: "linear-gradient(to right, #FD297B, #FF655B)",
           borderRadius: "15px",
           cursor: "pointer",
         }}
+        className="animation-button"
       >
         Discover my work
       </motion.button>

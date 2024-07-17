@@ -52,7 +52,7 @@ const Skills = () => {
         <motion.div
           style={{
             color: "#ebdddd",
-            fontSize: isMobile ? 14 : 26,
+            fontSize: isMobile ? 14 : 20,
             fontWeight: 400,
             textAlign: "start",
           }}
