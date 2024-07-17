@@ -1,8 +1,10 @@
-import { Box } from "@mui/material";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
-
 const AnimatedWelcome = () => {
-  const text1 = "Hi,👋".split("");
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
+  const text1 = "Hi,👋 ".split("");
   const text2 = "My name is".split("");
   const text3 = "Volkan";
   const text4 = "I am a Frontend Developer.".split("");
@@ -12,10 +14,10 @@ const AnimatedWelcome = () => {
       <Box
         sx={{
           display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "end",
-          marginTop: "10%",
+          flexDirection: isMobile ? "column" : "row",
+          justifyContent: "space-around",
+          alignItems: "center",
+          marginTop: isMobile ? "5%" : "10%",
         }}
       >
         <Box
@@ -24,13 +26,18 @@ const AnimatedWelcome = () => {
             flexDirection: "column",
             justifyContent: "start",
             alignItems: "start",
+            textAlign: "center",
+            marginBottom: isMobile ? "2rem" : 0,
           }}
         >
           <motion.h1
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5, duration: 1.5 }}
-            style={{ marginBottom: "0px", fontSize: "3rem" }}
+            style={{
+              marginBottom: "0px",
+              fontSize: isMobile ? "2rem" : "3rem",
+            }}
           >
             {text1.map((letter, index) => (
               <motion.span
@@ -47,7 +54,7 @@ const AnimatedWelcome = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1.5 }}
-            style={{ marginTop: "3px", fontSize: "2rem" }}
+            style={{ marginTop: "3px", fontSize: isMobile ? "1.5rem" : "2rem" }}
           >
             {text2.map((letter, index) => (
               <motion.span
@@ -65,8 +72,8 @@ const AnimatedWelcome = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 2, duration: 1.5 }}
             style={{
-              marginTop: "-2rem",
-              fontSize: "3rem",
+              marginTop: isMobile ? "-1rem" : "-2rem",
+              fontSize: isMobile ? "2rem" : "3rem",
               background: "-webkit-linear-gradient(45deg, #FD297B, #FF655B)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
@@ -87,7 +94,10 @@ const AnimatedWelcome = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 3, duration: 2 }}
-            style={{ marginTop: "-2rem", fontSize: "2rem" }}
+            style={{
+              marginTop: isMobile ? "-1rem" : "-2rem",
+              fontSize: isMobile ? "1.5rem" : "2rem",
+            }}
           >
             {text4.map((letter, index) => (
               <motion.span
@@ -105,9 +115,13 @@ const AnimatedWelcome = () => {
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 3, duration: 1.5 }}
-          src="../memoji.png"
+          src={"./memoji.png"}
           alt="Memoji of"
-          style={{ height: "auto", width: "20rem", marginRight: "-4rem" }}
+          style={{
+            height: "auto",
+            width: isMobile ? "14rem" : "20rem",
+            marginBottom: isMobile ? "2rem" : 0,
+          }}
         />
       </Box>
 
@@ -118,19 +132,14 @@ const AnimatedWelcome = () => {
         onClick={() => {
           window.location.href = "/projects";
         }}
-        whileHover={{
-          backgroundColor: "#ff4081",
-          color: "white",
-        }}
+        className="animation-button"
         style={{
           width: "16rem",
-          margin: "2rem auto 0",
-          marginTop: "20rem",
+          margin: "auto",
           padding: "1rem",
           height: "4rem",
           fontSize: "1.4rem",
           background: "-webkit-linear-gradient(45deg, #FD297B, #FF655B)",
-
           color: "white",
           border: "none",
           borderRadius: "15px",

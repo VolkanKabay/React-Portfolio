@@ -1,79 +1,69 @@
-import { Box, Container, Divider, Typography } from "@mui/material";
+import { Box, Container, Divider, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import NavigationBar from "./NavigationBar";
 import { motion } from "framer-motion";
 
 const Skills = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Container
       sx={{
         display: "flex",
         flexDirection: "column",
-        marginTop: "2%",
-        height: "100vh",
+        minHeight: "100vh",
+        paddingTop: "2%",
       }}
     >
       <NavigationBar />
       <Typography
         fontWeight={700}
-        fontSize={40}
+        fontSize={isMobile ? 32 : 40}
         variant="h2"
-        sx={{ textAlign: "start", color: "#ebdddd", marginTop: " 12.5%" }}
+        sx={{ textAlign: "center", color: "#ebdddd", marginTop: isMobile ? "8%" : "12.5%", marginBottom: "15%" }}
       >
         Tech Stack
       </Typography>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-around",
-          marginTop: "5%",
-        }}
+      <Grid
+        container
+        spacing={isMobile ? 2 : 4}
+        justifyContent="space-around"
+        sx={{ marginBottom: "5%" }}
       >
-        <SkillBox imageSrc="./react.svg" alt="React" text="React" />
-        <SkillBox
-          imageSrc="./typescript.svg"
-          alt="TypeScript"
-          text="TypeScript"
-        />
-        <SkillBox imageSrc="./redux.svg" alt="Redux" text="Redux" />
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-around",
-          marginTop: "5%",
-        }}
-      >
-        <SkillBox
-          imageSrc="./javascript.svg"
-          alt="JavaScript"
-          text="JavaScript"
-        />
-        <SkillBox imageSrc="./mui.svg" alt="Material-UI" text="Material-UI" />
-      </Box>
-      <Divider sx={{ marginTop: "10%", backgroundColor: "#ebdddd" }} />
+        <Grid item xs={6} sm={4} md={3}>
+          <SkillBox imageSrc="./react.svg" alt="React" text="React" />
+        </Grid>
+        <Grid item xs={6} sm={4} md={3}>
+          <SkillBox imageSrc="./typescript.svg" alt="TypeScript" text="TypeScript" />
+        </Grid>
+        <Grid item xs={6} sm={4} md={3}>
+          <SkillBox imageSrc="./redux.svg" alt="Redux" text="Redux" />
+        </Grid>
+        <Grid item xs={6} sm={4} md={3}>
+          <SkillBox imageSrc="./javascript.svg" alt="JavaScript" text="JavaScript" />
+        </Grid>
+        <Grid item xs={6} sm={4} md={3}>
+          <SkillBox imageSrc="./mui.svg" alt="Material-UI" text="Material-UI" />
+        </Grid>
+      </Grid>
+      <Divider sx={{ backgroundColor: "#ebdddd" }} />
 
-      <Box
-        sx={{
-          display: "flex",
-          marginTop: "10%",
-        }}
-      >
-        <motion.text
+      <Box sx={{ marginTop: "5%" }}>
+        <motion.div
           style={{
             color: "#ebdddd",
-            fontSize: 30,
+            fontSize: isMobile ? 14 : 26,
             fontWeight: 400,
-            marginBottom: "10%",
+            textAlign: "start",
           }}
           animate={{ opacity: 1 }}
           initial={{ opacity: 0, y: 0 }}
           transition={{ delay: 0.25, duration: 1.5 }}
         >
-          <b>Disclaimer: </b> <br /> Obviously I'm not a experienced developer
-          yet, so I'm not a master in any of these technologies. But I'm trying
-          to improve myself and learn new things about these technologies
-          everyday.
-        </motion.text>
+          <b>Disclaimer: </b>
+          <br />
+          Obviously I'm not an experienced developer yet, so I'm not a master in any of these technologies. But I'm trying to improve myself and learn new things about these technologies every day.
+        </motion.div>
       </Box>
     </Container>
   );
@@ -92,9 +82,11 @@ const SkillBox = ({
     <Box
       sx={{
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
         justifyContent: "center",
-        flexDirection: "column",
+        textAlign: "center",
+        marginBottom: "2rem",
       }}
     >
       <motion.img
@@ -103,11 +95,9 @@ const SkillBox = ({
         transition={{ delay: 0.25, duration: 1.5 }}
         src={imageSrc}
         alt={alt}
-        style={{ width: "50%", height: "100%" }}
+        style={{ width: "50%", maxWidth: "100%", height: "auto" }}
       />
-      <Typography sx={{ textAlign: "center", color: "#ebdddd" }} fontSize={40}>
-        {text}
-      </Typography>
+      <Typography sx={{ color: "#ebdddd", fontSize: 20 }}>{text}</Typography>
     </Box>
   );
 };

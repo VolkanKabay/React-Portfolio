@@ -10,6 +10,7 @@ function App() {
         flexDirection: "column",
         marginTop: "2%",
         height: "100vh",
+        marginBottom: "2%",
       }}
     >
       <NavigationBar />
