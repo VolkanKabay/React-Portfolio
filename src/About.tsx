@@ -39,7 +39,7 @@ const About = () => {
             marginBottom: "2%",
           }}
         >
-          I am a Software Engineer with a passion for developing web
+          I am a 20 year old Software Engineer with a passion for developing web
           applications. I have experience with front-end development using
           React, Redux, Typescript, Testing-Software (Vitest & Playwright) and
           Material-UI. Currently I am trying to improve my Frontend skills and
@@ -153,54 +153,54 @@ const About = () => {
             opacity: 0.4,
           }}
         />
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              marginTop: "2%",
-              alignItems: "center",
-              width: "100%",
-            }}
-          >
-            <Typography
-              variant="caption"
-              fontSize={20}
-              sx={{
-                color: "#ebdddd",
-                opacity: 0.7,
-                flexGrow: 1,
-              }}
-            >
-              Self Employed - Hardware related services
-            </Typography>
-            <Chip
-              label="Self Employed"
-              variant="filled"
-              sx={{
-                background: "#D7FFE0",
-                color: "#1B5E20",
-              }}
-            />
-          </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            marginTop: "2%",
+            alignItems: "center",
+            width: "100%",
+          }}
+        >
           <Typography
-            variant="body1"
-            fontSize={14}
+            variant="caption"
+            fontSize={20}
             sx={{
               color: "#ebdddd",
               opacity: 0.7,
+              flexGrow: 1,
             }}
           >
-            12.2022 - 05.2024
+            Self Employed - Hardware related services
           </Typography>
-          <Divider
+          <Chip
+            label="Self Employed"
+            variant="filled"
             sx={{
-              marginTop: "2%",
-              height: "2px",
-              width: "100%",
-              backgroundColor: "#ebdddd",
-              opacity: 0.4,
+              background: "#D7FFE0",
+              color: "#1B5E20",
             }}
           />
+        </Box>
+        <Typography
+          variant="body1"
+          fontSize={14}
+          sx={{
+            color: "#ebdddd",
+            opacity: 0.7,
+          }}
+        >
+          12.2022 - 05.2024
+        </Typography>
+        <Divider
+          sx={{
+            marginTop: "2%",
+            height: "2px",
+            width: "100%",
+            backgroundColor: "#ebdddd",
+            opacity: 0.4,
+          }}
+        />
         <Box
           sx={{
             display: "flex",
