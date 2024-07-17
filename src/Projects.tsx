@@ -18,7 +18,7 @@ const Projects = () => {
       title: "This Portfolio!",
       link: "https://github.com/VolkanKabay/React-Portfolio",
       description:
-        "This is the portfolio you are currently looking at. It was built using React, TypeScript, and Material-UI. The animations were made using Framer Motion. I also used React-Router to handle the routing. The project is hosted on Netlify and the source code is available on GitHub.You can clearly see the improvements I made in my coding skills since the Spotify Clone.Since this is a portfolio, I wanted to keep it simple and clean, so I implemented a dark theme, animations and no unnecessary features.",
+        "This is the portfolio you are currently looking at. It was built using React, TypeScript, and Material-UI. The animations were made using Framer Motion. I also used React-Router to handle the routing. The project is hosted on Netlify and the source code is available on GitHub.You can clearly see the improvements I made in my coding skills since the Spotify Clone.Since this is a portfolio, I wanted to keep it simple and clean, so I implemented a dark theme, animations and no unnecessary features. A visitor count is present, which is obtained from an firebase database.",
     },
   ];
 
