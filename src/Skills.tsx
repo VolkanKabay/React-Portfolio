@@ -1,6 +1,15 @@
-import { Box, Container, Divider, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
+import {
+  Box,
+  Container,
+  Divider,
+  Grid,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import NavigationBar from "./NavigationBar";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 
 const Skills = () => {
   const theme = useTheme();
@@ -20,7 +29,12 @@ const Skills = () => {
         fontWeight={700}
         fontSize={isMobile ? 32 : 40}
         variant="h2"
-        sx={{ textAlign: "center", color: "#ebdddd", marginTop: isMobile ? "8%" : "12.5%", marginBottom: "15%" }}
+        sx={{
+          textAlign: "center",
+          color: "#ebdddd",
+          marginTop: isMobile ? "8%" : "12.5%",
+          marginBottom: "15%",
+        }}
       >
         Tech Stack
       </Typography>
@@ -34,13 +48,21 @@ const Skills = () => {
           <SkillBox imageSrc="./react.svg" alt="React" text="React" />
         </Grid>
         <Grid item xs={6} sm={4} md={3}>
-          <SkillBox imageSrc="./typescript.svg" alt="TypeScript" text="TypeScript" />
+          <SkillBox
+            imageSrc="./typescript.svg"
+            alt="TypeScript"
+            text="TypeScript"
+          />
         </Grid>
         <Grid item xs={6} sm={4} md={3}>
           <SkillBox imageSrc="./redux.svg" alt="Redux" text="Redux" />
         </Grid>
         <Grid item xs={6} sm={4} md={3}>
-          <SkillBox imageSrc="./javascript.svg" alt="JavaScript" text="JavaScript" />
+          <SkillBox
+            imageSrc="./javascript.svg"
+            alt="JavaScript"
+            text="JavaScript"
+          />
         </Grid>
         <Grid item xs={6} sm={4} md={3}>
           <SkillBox imageSrc="./mui.svg" alt="Material-UI" text="Material-UI" />
@@ -62,9 +84,12 @@ const Skills = () => {
         >
           <b>Disclaimer: </b>
           <br />
-          Obviously I'm not an experienced developer yet, so I'm not a master in any of these technologies. But I'm trying to improve myself and learn new things about these technologies every day.
+          Obviously I'm not an experienced developer yet, so I'm not a master in
+          any of these technologies. But I'm trying to improve myself and learn
+          new things about these technologies every day.
         </motion.div>
       </Box>
+      <Footer />
     </Container>
   );
 };

@@ -1,6 +1,7 @@
 import { Box, Container } from "@mui/material";
 import NavigationBar from "./NavigationBar";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 
 const Projects = () => {
   const projects = [
@@ -23,84 +24,87 @@ const Projects = () => {
   ];
 
   return (
-    <Container
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        marginTop: "2%",
-        height: "100vh",
-      }}
-    >
-      <NavigationBar />
-      <Box
+    <>
+      <Container
         sx={{
-          marginTop: "10%",
-          gap: "3%",
-          display: "block",
-          justifyContent: "space-around",
-          alignItems: "space-around",
-          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+          marginTop: "2%",
+          height: "100vh",
         }}
       >
-        {projects.map((project) => (
-          <Box key={project.id} sx={{}}>
-            <motion.text
-              transition={{ delay: 0.5, duration: 1.5 }}
-              animate={{ opacity: 1, x: 0 }}
-              initial={{ opacity: 0, x: -100 }}
-              fontWeight={600}
-              style={{
-                fontSize: "2rem",
-                marginBottom: "2%",
-                textAlign: "center",
-                display: "block",
-                fontWeight: 600,
-              }}
-            >
-              {project.title}
-            </motion.text>
-            <Box
-              sx={{
-                backgroundColor: "linear-gradient(to right, #414345, #232526)",
-                padding: "2%",
-                boxShadow:
-                  "0px 0px 10px 0px  linear-gradient(to right, #414345, #232526)",
-              }}
-            >
-              <motion.img
+        <NavigationBar />
+        <Box
+          sx={{
+            marginTop: "10%",
+            gap: "3%",
+            display: "block",
+            justifyContent: "space-around",
+            alignItems: "space-around",
+            height: "100%",
+          }}
+        >
+          {projects.map((project) => (
+            <Box key={project.id} sx={{}}>
+              <motion.text
                 transition={{ delay: 0.5, duration: 1.5 }}
                 animate={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
-                onClick={() => window.open(project.link, "_blank")}
-                src={project.image}
-                alt={project.title}
+                fontWeight={600}
                 style={{
-                  cursor: "pointer",
-                  width: "100%",
-                  height: "auto",
-                  objectFit: "fill",
-                  boxShadow: "0px 0px 10px 0px #000000",
-                }}
-              />
-
-              <motion.text
-                transition={{ delay: 0.5, duration: 1.5 }}
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                fontWeight={400}
-                fontSize={20}
-                style={{
-                  marginTop: "3%",
-                  textAlign: "start",
+                  fontSize: "2rem",
+                  marginBottom: "2%",
+                  textAlign: "center",
+                  display: "block",
+                  fontWeight: 600,
                 }}
               >
-                {project.description}
+                {project.title}
               </motion.text>
+              <Box
+                sx={{
+                  backgroundColor:
+                    "linear-gradient(to right, #414345, #232526)",
+                  padding: "2%",
+                  boxShadow:
+                    "0px 0px 10px 0px  linear-gradient(to right, #414345, #232526)",
+                }}
+              >
+                <motion.img
+                  transition={{ delay: 0.5, duration: 1.5 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: -100 }}
+                  onClick={() => window.open(project.link, "_blank")}
+                  src={project.image}
+                  alt={project.title}
+                  style={{
+                    cursor: "pointer",
+                    width: "100%",
+                    height: "auto",
+                    objectFit: "fill",
+                    boxShadow: "0px 0px 10px 0px #000000",
+                  }}
+                />
+
+                <motion.text
+                  transition={{ delay: 0.5, duration: 1.5 }}
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  fontWeight={400}
+                  fontSize={20}
+                  style={{
+                    marginTop: "3%",
+                    textAlign: "start",
+                  }}
+                >
+                  {project.description}
+                </motion.text>
+              </Box>
             </Box>
-          </Box>
-        ))}
-      </Box>
-    </Container>
+          ))}
+        </Box>
+      </Container>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 const AnimatedWelcome = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -149,6 +150,7 @@ const AnimatedWelcome = () => {
       >
         Discover my work
       </motion.button>
+      <Footer />
     </>
   );
 };

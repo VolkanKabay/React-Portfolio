@@ -1,5 +1,6 @@
 import { Box, Chip, Container, Divider, Typography } from "@mui/material";
 import NavigationBar from "./NavigationBar";
+import Footer from "./Footer";
 
 const About = () => {
   return (
@@ -357,6 +358,7 @@ const About = () => {
           }}
         />
       </Box>
+      <Footer />
     </Container>
   );
 };
