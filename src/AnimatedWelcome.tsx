@@ -118,6 +118,7 @@ const AnimatedWelcome = () => {
           src={"./memoji.png"}
           alt="Memoji of"
           style={{
+            userSelect: "none",
             height: "auto",
             width: isMobile ? "14rem" : "20rem",
             marginBottom: isMobile ? "2rem" : 0,
