@@ -136,6 +136,7 @@ const AnimatedWelcome = () => {
           width: "16rem",
           margin: "auto",
           padding: "1rem",
+          color: "white",
           height: "4rem",
           border: "none",
           fontSize: "1.4rem",
