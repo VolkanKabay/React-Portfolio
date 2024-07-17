@@ -23,29 +23,24 @@ const NavigationBar = () => {
       <AppBar
         sx={{
           boxShadow: "none",
-          width: "100%",
           backgroundColor: "#111111",
           transition: "opacity 0.5s",
-          paddingLeft: "0px",
-          paddingRight: "0px",
         }}
         position="static"
       >
         <Toolbar
           sx={{
             display: "flex",
-            justifyContent: isMobile ? "center" : "flex-end",
             flexDirection: isMobile ? "column" : "row",
             alignItems: "center",
-            gap: isMobile ? "1rem" : "2rem",
-            padding: isMobile ? "1rem" : "0",
           }}
         >
           <Box
             sx={{
               display: "flex",
               justifyContent: isMobile ? "center" : "start",
-              marginBottom: isMobile ? "1rem" : 0,
+              marginTop: isMobile ? "0.5rem" : 0,
+              marginBottom: isMobile ? "0.5rem" : 0,
               marginRight: isMobile ? "0" : "auto",
             }}
           >

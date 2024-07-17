@@ -1,4 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container } from "@mui/material";
 import NavigationBar from "./NavigationBar";
 import { motion } from "framer-motion";
 
@@ -44,15 +44,21 @@ const Projects = () => {
       >
         {projects.map((project) => (
           <Box key={project.id} sx={{}}>
-            <Typography
-              variant="h3"
+            <motion.text
+              transition={{ delay: 0.5, duration: 1.5 }}
+              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
               fontWeight={600}
-              mt={5}
-              mb={5}
-              textAlign={"center"}
+              style={{
+                fontSize: "2rem",
+                marginBottom: "2%",
+                textAlign: "center",
+                display: "block",
+                fontWeight: 600,
+              }}
             >
               {project.title}
-            </Typography>
+            </motion.text>
             <Box
               sx={{
                 backgroundColor: "linear-gradient(to right, #414345, #232526)",
@@ -62,7 +68,7 @@ const Projects = () => {
               }}
             >
               <motion.img
-                transition={{ delay: 1, duration: 1.5 }}
+                transition={{ delay: 0.5, duration: 1.5 }}
                 animate={{ opacity: 1, x: 0 }}
                 initial={{ opacity: 0, x: -100 }}
                 onClick={() => window.open(project.link, "_blank")}
@@ -77,16 +83,19 @@ const Projects = () => {
                 }}
               />
 
-              <Typography
-                variant="body1"
+              <motion.text
+                transition={{ delay: 0.5, duration: 1.5 }}
+                animate={{ opacity: 1 }}
+                initial={{ opacity: 0 }}
                 fontWeight={400}
                 fontSize={20}
-                textAlign={"start"}
-                mt={2}
-                mb={10}
+                style={{
+                  marginTop: "3%",
+                  textAlign: "start",
+                }}
               >
                 {project.description}
-              </Typography>
+              </motion.text>
             </Box>
           </Box>
         ))}
