@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./About.tsx";
 import Skills from "./Skills.tsx";
 import Projects from "./Projects.tsx";
+import Disclaimer from "./Disclaimer.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/impressum" element={<Disclaimer />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

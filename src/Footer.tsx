@@ -38,16 +38,24 @@ const Footer = () => {
           color: "#ebdddd",
         }}
       >
-        © 2024 Volkan Kabay. All rights reserved.
+        <VisitorCount />
       </Typography>
       <Typography
         variant="body2"
         sx={{
           color: "#ebdddd",
+          marginTop: "1rem",
         }}
       >
-        <VisitorCount />
+        © 2024 Volkan Kabay. All rights reserved.
       </Typography>
+
+      <a
+        href="/impressum"
+        style={{ fontSize: "16px", color: "#ebdddd", fontWeight: "normal" }}
+      >
+        Disclaimer, Privacy Policy, and Impressum
+      </a>
     </Box>
   );
 };
