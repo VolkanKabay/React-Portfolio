@@ -32,10 +32,10 @@ const Skills = () => {
         fontSize={isMobile ? 32 : 40}
         variant="h2"
         sx={{
-          textAlign: "start",
+          textAlign: isMobile ? "center" : "start",
           color: "#ebdddd",
-          marginTop: isMobile ? "8%" : "12.5%",
-          marginBottom: "15%",
+          marginTop: isMobile ? "12%" : "12.5%",
+          marginBottom: isMobile ? "20%" : "10%",
         }}
       >
         Tech Stack
