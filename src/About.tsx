@@ -4,362 +4,156 @@ import Footer from "./Footer";
 
 const About = () => {
   return (
-    <Container
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        marginTop: "2%",
-      }}
-    >
+    <Container sx={{ marginTop: "2%" }}>
       <NavigationBar />
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "start",
-          alignItems: "start",
-          marginTop: "15%",
-        }}
-      >
-        <Typography
-          variant="h3"
-          fontWeight={700}
-          sx={{
-            color: "#ebdddd",
-            marginBottom: "2%",
-          }}
-        >
-          About Me
-        </Typography>
-        <Typography
-          variant="body1"
-          fontSize={18}
-          sx={{
-            color: "#ebdddd",
-            maxWidth: "75ch",
-            marginBottom: "2%",
-          }}
-        >
-          I am a 20 year old Software Engineer with a passion for developing web
-          applications. I have experience with front-end development using
-          React, Redux, Typescript, Testing-Software (Vitest & Playwright) and
-          Material-UI. Currently I am trying to improve my Frontend skills and
-          learn new technologies which will help me to become a better
-          developer. I am also interested in learning more about backend
-          development. Building Projects and educating myself is what I enjoy
-          the most.
-        </Typography>
-        <Typography
-          variant="h3"
-          fontWeight={700}
-          sx={{
-            color: "#ebdddd",
-            marginBottom: "2%",
-          }}
-        >
-          Work Experience
-        </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
+
+      <Box sx={{ mt: 4, px: 2 }}>
+        <Box sx={{ mb: 4 }}>
           <Typography
-            variant="caption"
-            fontSize={20}
-            sx={{
-              color: "#ebdddd",
-              opacity: 0.7,
-              flexGrow: 1,
-            }}
+            variant="h4"
+            fontWeight={600}
+            sx={{ color: "#ebdddd", mb: 2 }}
           >
-            Apprenticeship as IT-Specialist
+            About Me
           </Typography>
-          <Chip
+          <Typography
+            variant="body1"
+            sx={{ color: "#ebdddd", maxWidth: "75ch", mb: 2 }}
+          >
+            I am a 20-year-old Software Engineer passionate about developing web
+            applications. I have experience with front-end development using
+            React, Redux, TypeScript, and Material-UI. Currently improving my
+            skills in frontend development and interested in backend development
+            as well.
+          </Typography>
+        </Box>
+
+        <Box sx={{ mb: 4 }}>
+          <Typography
+            variant="h4"
+            fontWeight={600}
+            sx={{ color: "#ebdddd", mb: 2 }}
+          >
+            Work Experience
+          </Typography>
+          <WorkExperience
+            title="Apprenticeship as IT-Specialist"
+            date="09.2023 - present"
             label="Full-time"
-            variant="filled"
-            sx={{
-              background: "#D7FFE0",
-              color: "#1B5E20",
-            }}
           />
-        </Box>
-        <Typography
-          variant="body1"
-          fontSize={14}
-          sx={{
-            color: "#ebdddd",
-            opacity: 0.7,
-          }}
-        >
-          09.2023 - present
-        </Typography>
-        <Divider
-          sx={{
-            marginTop: "2%",
-            height: "2px",
-            width: "100%",
-            backgroundColor: "#ebdddd",
-            opacity: 0.4,
-          }}
-        />
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            marginTop: "2%",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <Typography
-            variant="caption"
-            fontSize={20}
-            sx={{
-              color: "#ebdddd",
-              opacity: 0.7,
-              flexGrow: 1,
-            }}
-          >
-            Internship as IT-Specialist
-          </Typography>
-          <Chip
+          <WorkExperience
+            title="Internship as IT-Specialist"
+            date="06.2023 - 07.2023"
             label="Internship"
-            variant="filled"
-            sx={{
-              background: "#D7FFE0",
-              color: "#1B5E20",
-            }}
           />
-        </Box>
-        <Typography
-          variant="body1"
-          fontSize={14}
-          sx={{
-            color: "#ebdddd",
-            opacity: 0.7,
-          }}
-        >
-          06.2023 - 07.2023
-        </Typography>
-        <Divider
-          sx={{
-            marginTop: "2%",
-            height: "2px",
-            width: "100%",
-            backgroundColor: "#ebdddd",
-            opacity: 0.4,
-          }}
-        />
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            marginTop: "2%",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <Typography
-            variant="caption"
-            fontSize={20}
-            sx={{
-              color: "#ebdddd",
-              opacity: 0.7,
-              flexGrow: 1,
-            }}
-          >
-            Self Employed - Hardware related services
-          </Typography>
-          <Chip
+          <WorkExperience
+            title="Self Employed - Hardware related services"
+            date="12.2022 - 05.2024"
             label="Self Employed"
-            variant="filled"
-            sx={{
-              background: "#D7FFE0",
-              color: "#1B5E20",
-            }}
           />
-        </Box>
-        <Typography
-          variant="body1"
-          fontSize={14}
-          sx={{
-            color: "#ebdddd",
-            opacity: 0.7,
-          }}
-        >
-          12.2022 - 05.2024
-        </Typography>
-        <Divider
-          sx={{
-            marginTop: "2%",
-            height: "2px",
-            width: "100%",
-            backgroundColor: "#ebdddd",
-            opacity: 0.4,
-          }}
-        />
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            marginTop: "2%",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <Typography
-            variant="caption"
-            fontSize={20}
-            sx={{
-              color: "#ebdddd",
-              opacity: 0.7,
-              flexGrow: 1,
-            }}
-          >
-            Voluntary Social Year
-          </Typography>
-          <Chip
+          <WorkExperience
+            title="Voluntary Social Year"
+            date="10.2021 - 09.2022"
             label="Social Year"
-            variant="filled"
-            sx={{
-              background: "#D7FFE0",
-              color: "#1B5E20",
-            }}
           />
         </Box>
-        <Typography
-          variant="body1"
-          fontSize={14}
-          sx={{
-            color: "#ebdddd",
-            opacity: 0.7,
-          }}
-        >
-          10.2021 - 09.2022
-        </Typography>
-        <Divider
-          sx={{
-            marginTop: "2%",
-            height: "2px",
-            width: "100%",
-            backgroundColor: "#ebdddd",
-            opacity: 0.4,
-          }}
-        />
-        <Typography
-          variant="h3"
-          fontWeight={700}
-          sx={{
-            color: "#ebdddd",
-            marginTop: "2%",
-          }}
-        >
-          Education
-        </Typography>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            marginTop: "2%",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
+
+        <Box sx={{ mb: 4 }}>
           <Typography
-            variant="caption"
-            fontSize={20}
-            sx={{
-              color: "#ebdddd",
-              opacity: 0.7,
-              flexGrow: 1,
-            }}
+            variant="h4"
+            fontWeight={600}
+            sx={{ color: "#ebdddd", mb: 2 }}
           >
-            Self Teaching - Web Development
+            Education
           </Typography>
-          <Chip
+          <Education
+            title="Self Teaching - Web Development"
+            date="2023 - present"
             label="Self Teaching"
-            variant="filled"
-            sx={{
-              background: "#D7FFE0",
-              color: "#1B5E20",
-            }}
           />
-        </Box>
-        <Typography
-          variant="body1"
-          fontSize={14}
-          sx={{
-            color: "#ebdddd",
-            opacity: 0.7,
-          }}
-        >
-          2023 - present
-        </Typography>
-        <Divider
-          sx={{
-            marginTop: "2%",
-            height: "2px",
-            width: "100%",
-            backgroundColor: "#ebdddd",
-            opacity: 0.4,
-          }}
-        />
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            marginTop: "2%",
-            alignItems: "center",
-            width: "100%",
-          }}
-        >
-          <Typography
-            variant="caption"
-            fontSize={20}
-            sx={{
-              color: "#ebdddd",
-              opacity: 0.7,
-              flexGrow: 1,
-            }}
-          >
-            Secondary school certificate
-          </Typography>
-          <Chip
+          <Education
+            title="Secondary school certificate"
+            date="2021"
             label="School Certificate"
-            variant="filled"
-            sx={{
-              background: "#D7FFE0",
-              color: "#1B5E20",
-            }}
           />
         </Box>
-        <Typography
-          variant="body1"
-          fontSize={14}
-          sx={{
-            color: "#ebdddd",
-            opacity: 0.7,
-          }}
-        >
-          2021
-        </Typography>
-        <Divider
-          sx={{
-            marginTop: "2%",
-            height: "2px",
-            width: "100%",
-            backgroundColor: "#ebdddd",
-            opacity: 0.4,
-            marginBottom: "20%",
-          }}
-        />
       </Box>
+
       <Footer />
     </Container>
   );
 };
+
+const WorkExperience = ({
+  title,
+  date,
+  label,
+}: {
+  title: string;
+  date: string;
+  label: string;
+}) => (
+  <Box sx={{ mb: 4 }}>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      <Typography variant="body2" sx={{ color: "#ebdddd", opacity: 0.7 }}>
+        {title}
+      </Typography>
+      <Chip
+        label={label}
+        variant="filled"
+        sx={{ background: "#D7FFE0", color: "#1B5E20" }}
+      />
+    </Box>
+    <Typography
+      variant="body1"
+      sx={{ color: "#ebdddd", opacity: 0.7, fontSize: 14, mt: 1 }}
+    >
+      {date}
+    </Typography>
+    <Divider sx={{ mt: 2, backgroundColor: "#ebdddd", opacity: 0.4 }} />
+  </Box>
+);
+
+const Education = ({
+  title,
+  date,
+  label,
+}: {
+  title: string;
+  date: string;
+  label: string;
+}) => (
+  <Box sx={{ mb: 4 }}>
+    <Box
+      sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      <Typography variant="body1" sx={{ color: "#ebdddd", opacity: 0.7 }}>
+        {title}
+      </Typography>
+      <Chip
+        label={label}
+        variant="filled"
+        sx={{ background: "#D7FFE0", color: "#1B5E20" }}
+      />
+    </Box>
+    <Typography
+      variant="body2"
+      sx={{ color: "#ebdddd", opacity: 0.7, fontSize: 14, mt: 1 }}
+    >
+      {date}
+    </Typography>
+    <Divider sx={{ mt: 2, backgroundColor: "#ebdddd", opacity: 0.4 }} />
+  </Box>
+);
+
 export default About;
