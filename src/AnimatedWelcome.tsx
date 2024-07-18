@@ -9,7 +9,23 @@ const AnimatedWelcome = () => {
   const text2 = "My name is".split("");
   const text3 = "Volkan";
   const text4 = "I am a Frontend Developer.".split("");
-
+  const buttonVariants = {
+    hidden: { opacity: 0, y: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      y: [0, -10, 10],
+      scale: 1,
+      transition: {
+        delay: 2.25,
+        duration: 0.8,
+        ease: "easeInOut",
+      },
+    },
+    hover: {
+      boxShadow: "0px 0px 8px #FF655B",
+    },
+    tap: { scale: 0.95 },
+  };
   return (
     <>
       <Box
@@ -128,16 +144,18 @@ const AnimatedWelcome = () => {
       </Box>
 
       <motion.button
-        initial={{ opacity: 0, y: 0 }}
-        animate={{ opacity: 1, y: 15 }}
-        transition={{ delay: 4, duration: 1.5 }}
+        variants={buttonVariants}
+        initial="hidden"
+        animate="visible"
+        whileHover="hover"
+        whileTap="tap"
         onClick={() => {
           window.location.href = "/projects";
         }}
         style={{
           width: "16rem",
           margin: "auto",
-          marginBottom: "2rem",
+          marginBottom: "5rem",
           padding: "1rem",
           color: "white",
           height: "4rem",

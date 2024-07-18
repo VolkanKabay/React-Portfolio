@@ -9,7 +9,7 @@ function App() {
         display: "flex",
         flexDirection: "column",
         marginTop: "2%",
-        height: "100vh",
+        height: "115vh",
         marginBottom: "2%",
       }}
     >
