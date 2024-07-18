@@ -1,13 +1,30 @@
-import { Box, Chip, Container, Divider, Typography } from "@mui/material";
+import {
+  Box,
+  Chip,
+  Container,
+  Divider,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from "@mui/material";
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
 
 const About = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <Container sx={{ marginTop: "2%" }}>
+    <Container
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        marginTop: "2%",
+        height: "100vh",
+        marginBottom: "2%",
+      }}
+    >
       <NavigationBar />
-
-      <Box sx={{ mt: 4, px: 2 }}>
+      <Box sx={{ mt: 10, px: 2, marginLeft: isMobile ? "0" : "-1rem" }}>
         <Box sx={{ mb: 4 }}>
           <Typography
             variant="h4"
@@ -20,11 +37,11 @@ const About = () => {
             variant="body1"
             sx={{ color: "#ebdddd", maxWidth: "75ch", mb: 2 }}
           >
-            I am a 20-year-old Software Engineer passionate about developing web
-            applications. I have experience with front-end development using
-            React, Redux, TypeScript, and Material-UI. Currently improving my
-            skills in frontend development and interested in backend development
-            as well.
+            I am a 20-year-old German Software Engineer passionate about
+            developing web applications. I have experience with front-end
+            development using React, Redux, TypeScript, and Material-UI.
+            Currently improving my skills in frontend development and interested
+            in backend development as well.
           </Typography>
         </Box>
 
@@ -78,7 +95,6 @@ const About = () => {
           />
         </Box>
       </Box>
-
       <Footer />
     </Container>
   );

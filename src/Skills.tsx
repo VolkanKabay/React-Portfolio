@@ -22,8 +22,9 @@ const Skills = () => {
       sx={{
         display: "flex",
         flexDirection: "column",
-        minHeight: "100vh",
-        paddingTop: "2%",
+        marginTop: "2%",
+        height: "100vh",
+        marginBottom: "2%",
       }}
     >
       <NavigationBar />
