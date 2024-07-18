@@ -1,8 +1,10 @@
 import { Box, Typography, Link } from "@mui/material";
+import NavigationBar from "./NavigationBar";
 
 const Disclaimer = () => {
   return (
     <Box className="impressum" p={3}>
+      <NavigationBar />
       <Typography variant="h2" gutterBottom>
         Impressum
       </Typography>
