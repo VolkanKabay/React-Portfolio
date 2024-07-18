@@ -10,6 +10,8 @@ import {
 import NavigationBar from "./NavigationBar";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
+import StarIcon from "@mui/icons-material/Star";
+import StarBorderIcon from "@mui/icons-material/StarBorder";
 
 const Skills = () => {
   const theme = useTheme();
@@ -30,7 +32,7 @@ const Skills = () => {
         fontSize={isMobile ? 32 : 40}
         variant="h2"
         sx={{
-          textAlign: "center",
+          textAlign: "start",
           color: "#ebdddd",
           marginTop: isMobile ? "8%" : "12.5%",
           marginBottom: "15%",
@@ -45,27 +47,44 @@ const Skills = () => {
         sx={{ marginBottom: "5%" }}
       >
         <Grid item xs={6} sm={4} md={3}>
-          <SkillBox imageSrc="./react.svg" alt="React" text="React" />
+          <SkillBox
+            imageSrc="./react.svg"
+            alt="React"
+            text="React"
+            rating={3}
+          />
         </Grid>
         <Grid item xs={6} sm={4} md={3}>
           <SkillBox
             imageSrc="./typescript.svg"
             alt="TypeScript"
             text="TypeScript"
+            rating={3}
           />
         </Grid>
         <Grid item xs={6} sm={4} md={3}>
-          <SkillBox imageSrc="./redux.svg" alt="Redux" text="Redux" />
+          <SkillBox
+            imageSrc="./redux.svg"
+            alt="Redux"
+            text="Redux"
+            rating={2}
+          />
         </Grid>
         <Grid item xs={6} sm={4} md={3}>
           <SkillBox
             imageSrc="./javascript.svg"
             alt="JavaScript"
             text="JavaScript"
+            rating={2}
           />
         </Grid>
         <Grid item xs={6} sm={4} md={3}>
-          <SkillBox imageSrc="./mui.svg" alt="Material-UI" text="Material-UI" />
+          <SkillBox
+            imageSrc="./mui.svg"
+            alt="Material-UI"
+            text="Material-UI"
+            rating={3}
+          />
         </Grid>
       </Grid>
       <Divider sx={{ backgroundColor: "#ebdddd" }} />
@@ -98,10 +117,12 @@ const SkillBox = ({
   imageSrc,
   alt,
   text,
+  rating,
 }: {
   imageSrc: string;
   alt: string;
   text: string;
+  rating: number;
 }) => {
   return (
     <Box
@@ -123,6 +144,15 @@ const SkillBox = ({
         style={{ width: "50%", maxWidth: "100%", height: "auto" }}
       />
       <Typography sx={{ color: "#ebdddd", fontSize: 20 }}>{text}</Typography>
+      <Box sx={{ display: "flex", alignItems: "center", marginTop: "0.5rem" }}>
+        {Array.from({ length: 5 }, (_, index) =>
+          index < rating ? (
+            <StarIcon key={index} sx={{ color: "#ebdddd" }} />
+          ) : (
+            <StarBorderIcon key={index} sx={{ color: "#ebdddd" }} />
+          )
+        )}
+      </Box>
     </Box>
   );
 };

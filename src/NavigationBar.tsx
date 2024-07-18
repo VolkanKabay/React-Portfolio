@@ -55,6 +55,7 @@ const NavigationBar = () => {
                   fontSize: isMobile ? "1.2rem" : "1.5rem",
                   width: isMobile ? "2rem" : "2.25rem",
                   height: isMobile ? "2rem" : "2.25rem",
+                  marginLeft: isMobile ? "1rem" : "-1.5rem",
                   marginRight: isMobile ? "1rem" : "1.5rem",
                 }}
               />

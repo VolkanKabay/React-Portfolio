@@ -16,7 +16,7 @@ const AnimatedWelcome = () => {
         sx={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
-          justifyContent: "space-around",
+          justifyContent: "space-between",
           alignItems: "center",
           marginTop: isMobile ? "5%" : "10%",
         }}
