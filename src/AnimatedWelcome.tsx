@@ -54,6 +54,9 @@ const AnimatedWelcome = () => {
             style={{
               marginBottom: "0px",
               fontSize: isMobile ? "2rem" : "3rem",
+              zIndex: 1,
+              boxShadow:
+                "0px 0px 10px 0px  linear-gradient(to right, #414345, #232526)",
             }}
           >
             {text1.map((letter, index) => (
@@ -71,7 +74,13 @@ const AnimatedWelcome = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 1.5 }}
-            style={{ marginTop: "3px", fontSize: isMobile ? "1.5rem" : "2rem" }}
+            style={{
+              marginTop: "3px",
+              fontSize: isMobile ? "1.5rem" : "2rem",
+              zIndex: 1,
+              boxShadow:
+                "0px 0px 10px 0px  linear-gradient(to right, #414345, #232526)",
+            }}
           >
             {text2.map((letter, index) => (
               <motion.span
@@ -94,6 +103,9 @@ const AnimatedWelcome = () => {
               background: "-webkit-linear-gradient(45deg, #FD297B, #FF655B)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
+              zIndex: 1,
+              boxShadow:
+                "0px 0px 10px 0px  linear-gradient(to right, #414345, #232526)",
             }}
           >
             {text3.split("").map((letter, index) => (
@@ -114,6 +126,9 @@ const AnimatedWelcome = () => {
             style={{
               marginTop: isMobile ? "-1rem" : "-2rem",
               fontSize: isMobile ? "1.5rem" : "2rem",
+              zIndex: 1,
+              boxShadow:
+                "0px 0px 10px 0px  linear-gradient(to right, #414345, #232526)",
             }}
           >
             {text4.map((letter, index) => (
@@ -135,10 +150,13 @@ const AnimatedWelcome = () => {
           src={"./memoji.png"}
           alt="Memoji of"
           style={{
+            zIndex: 1,
             userSelect: "none",
             height: "auto",
             width: isMobile ? "14rem" : "20rem",
             marginBottom: isMobile ? "2rem" : 0,
+            boxShadow:
+              "0px 0px 10px 0px  linear-gradient(to right, #414345, #232526)",
           }}
         />
       </Box>
