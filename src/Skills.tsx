@@ -28,65 +28,57 @@ const Skills = () => {
       }}
     >
       <NavigationBar />
-      <Typography
-        fontWeight={700}
-        fontSize={isMobile ? 32 : 40}
-        variant="h2"
-        sx={{
-          textAlign: isMobile ? "center" : "start",
-          color: "#ebdddd",
-          marginTop: isMobile ? "12%" : "12.5%",
-          marginBottom: isMobile ? "20%" : "10%",
-        }}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
       >
-        Tech Stack
-      </Typography>
+        <Typography
+          fontWeight={700}
+          fontSize={isMobile ? 32 : 40}
+          variant="h2"
+          sx={{
+            textAlign: isMobile ? "center" : "start",
+            color: "#ebdddd",
+            marginTop: isMobile ? "12%" : "12.5%",
+            marginBottom: isMobile ? "20%" : "10%",
+          }}
+        >
+          Tech Stack
+        </Typography>
+      </motion.div>
       <Grid
         container
         spacing={isMobile ? 2 : 4}
         justifyContent="space-around"
         sx={{ marginBottom: "5%" }}
       >
-        <Grid item xs={6} sm={4} md={3}>
-          <SkillBox
-            imageSrc="./react.svg"
-            alt="React"
-            text="React"
-            rating={3}
-          />
-        </Grid>
-        <Grid item xs={6} sm={4} md={3}>
-          <SkillBox
-            imageSrc="./typescript.svg"
-            alt="TypeScript"
-            text="TypeScript"
-            rating={3}
-          />
-        </Grid>
-        <Grid item xs={6} sm={4} md={3}>
-          <SkillBox
-            imageSrc="./redux.svg"
-            alt="Redux"
-            text="Redux"
-            rating={2}
-          />
-        </Grid>
-        <Grid item xs={6} sm={4} md={3}>
-          <SkillBox
-            imageSrc="./javascript.svg"
-            alt="JavaScript"
-            text="JavaScript"
-            rating={2}
-          />
-        </Grid>
-        <Grid item xs={6} sm={4} md={3}>
-          <SkillBox
-            imageSrc="./mui.svg"
-            alt="Material-UI"
-            text="Material-UI"
-            rating={3}
-          />
-        </Grid>
+        {[
+          { imageSrc: "./react.svg", alt: "React", text: "React", rating: 3 },
+          {
+            imageSrc: "./typescript.svg",
+            alt: "TypeScript",
+            text: "TypeScript",
+            rating: 3,
+          },
+          { imageSrc: "./redux.svg", alt: "Redux", text: "Redux", rating: 2 },
+          {
+            imageSrc: "./javascript.svg",
+            alt: "JavaScript",
+            text: "JavaScript",
+            rating: 2,
+          },
+          {
+            imageSrc: "./mui.svg",
+            alt: "Material-UI",
+            text: "Material-UI",
+            rating: 3,
+          },
+        ].map((skill, index) => (
+          <Grid item xs={6} sm={4} md={3} key={index}>
+            <SkillBox {...skill} />
+          </Grid>
+        ))}
       </Grid>
       <Divider sx={{ backgroundColor: "#ebdddd" }} />
 
@@ -126,35 +118,43 @@ const SkillBox = ({
   rating: number;
 }) => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        textAlign: "center",
-        marginBottom: "2rem",
-      }}
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
     >
-      <motion.img
-        animate={{ opacity: 1, y: -40 }}
-        initial={{ opacity: 0, y: 0 }}
-        transition={{ delay: 0.25, duration: 1.5 }}
-        src={imageSrc}
-        alt={alt}
-        style={{ width: "50%", maxWidth: "100%", height: "auto" }}
-      />
-      <Typography sx={{ color: "#ebdddd", fontSize: 20 }}>{text}</Typography>
-      <Box sx={{ display: "flex", alignItems: "center", marginTop: "0.5rem" }}>
-        {Array.from({ length: 5 }, (_, index) =>
-          index < rating ? (
-            <StarIcon key={index} sx={{ color: "#ebdddd" }} />
-          ) : (
-            <StarBorderIcon key={index} sx={{ color: "#ebdddd" }} />
-          )
-        )}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          textAlign: "center",
+          marginBottom: "2rem",
+        }}
+      >
+        <motion.img
+          animate={{ opacity: 1, y: -40 }}
+          initial={{ opacity: 0, y: 0 }}
+          transition={{ delay: 0.25, duration: 1.5 }}
+          src={imageSrc}
+          alt={alt}
+          style={{ width: "50%", maxWidth: "100%", height: "auto" }}
+        />
+        <Typography sx={{ color: "#ebdddd", fontSize: 20 }}>{text}</Typography>
+        <Box
+          sx={{ display: "flex", alignItems: "center", marginTop: "0.5rem" }}
+        >
+          {Array.from({ length: 5 }, (_, index) =>
+            index < rating ? (
+              <StarIcon key={index} sx={{ color: "#ebdddd" }} />
+            ) : (
+              <StarBorderIcon key={index} sx={{ color: "#ebdddd" }} />
+            )
+          )}
+        </Box>
       </Box>
-    </Box>
+    </motion.div>
   );
 };
 
