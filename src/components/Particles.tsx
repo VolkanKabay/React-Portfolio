@@ -3,8 +3,8 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
 
-const ParticlesComponent = (props: { id: any }) => {
-  const [, setInit] = useState(false);
+const ParticlesComponent = () => {
+  const [init, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadSlim(engine);
@@ -73,7 +73,11 @@ const ParticlesComponent = (props: { id: any }) => {
     []
   );
 
-  return <Particles id={props.id} options={options} />;
+  if (init) {
+    return <Particles id="tsparticles" options={options} />;
+  }
+
+  return <></>;
 };
 
 export default ParticlesComponent;
