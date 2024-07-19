@@ -3,7 +3,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
 
-const ParticlesComponent = (props: { id: string | undefined }) => {
+const ParticlesComponent = (props: { id: any }) => {
   const [, setInit] = useState(false);
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -13,11 +13,7 @@ const ParticlesComponent = (props: { id: string | undefined }) => {
     });
   }, []);
 
-  const particlesLoaded = (container: any) => {
-    console.log(container);
-  };
-
-  const options = useMemo(
+  const options: any = useMemo(
     () => ({
       fpsLimit: 60,
       interactivity: {
@@ -45,13 +41,7 @@ const ParticlesComponent = (props: { id: string | undefined }) => {
         color: {
           value: "#FFFFFF",
         },
-        links: {
-          color: "#FFFFFF",
-          distance: 200,
-          enable: true,
-          opacity: 0.3,
-          width: 1,
-        },
+
         move: {
           direction: "none",
           enable: true,
@@ -83,7 +73,7 @@ const ParticlesComponent = (props: { id: string | undefined }) => {
     []
   );
 
-  return <Particles id={props.id} init={particlesLoaded} options={options} />;
+  return <Particles id={props.id} options={options} />;
 };
 
 export default ParticlesComponent;
