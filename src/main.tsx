@@ -7,10 +7,12 @@ import About from "./About.tsx";
 import Skills from "./Skills.tsx";
 import Projects from "./Projects.tsx";
 import Disclaimer from "./Disclaimer.tsx";
+import ParticlesComponent from "./components/Particles.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
+      <ParticlesComponent id="particles" />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />

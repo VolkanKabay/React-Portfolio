@@ -1,7 +1,6 @@
 import { Container } from "@mui/material";
 import AnimatedWelcome from "./AnimatedWelcome";
 import NavigationBar from "./NavigationBar";
-import ParticlesComponent from "./components/Particles";
 import "./App.css";
 function App() {
   return (
@@ -15,7 +14,6 @@ function App() {
       }}
       className="App"
     >
-      <ParticlesComponent id="particles" />
       <NavigationBar />
       <AnimatedWelcome />
     </Container>
