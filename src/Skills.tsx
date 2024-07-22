@@ -50,7 +50,7 @@ const Skills = () => {
       <Grid
         container
         spacing={isMobile ? 2 : 4}
-        justifyContent="space-around"
+        justifyContent="start"
         sx={{ marginBottom: "5%" }}
       >
         {[
@@ -61,6 +61,12 @@ const Skills = () => {
             text: "TypeScript",
             rating: 3,
           },
+          {
+            imageSrc: "./mui.svg",
+            alt: "Material-UI",
+            text: "Material-UI",
+            rating: 3,
+          },
           { imageSrc: "./redux.svg", alt: "Redux", text: "Redux", rating: 2 },
           {
             imageSrc: "./javascript.svg",
@@ -69,13 +75,25 @@ const Skills = () => {
             rating: 2,
           },
           {
-            imageSrc: "./mui.svg",
-            alt: "Material-UI",
-            text: "Material-UI",
-            rating: 3,
+            imageSrc: "./vitest.svg",
+            alt: "Vitest",
+            text: "Vitest",
+            rating: 2,
+          },
+          {
+            imageSrc: "./threejs.svg",
+            alt: "Three.js",
+            text: "Three.js",
+            rating: 1,
+          },
+          {
+            imageSrc: "./sql.svg",
+            alt: "SQL",
+            text: "SQL",
+            rating: 1,
           },
         ].map((skill, index) => (
-          <Grid item xs={6} sm={4} md={3} key={index}>
+          <Grid item xs={6} sm={3} md={3} key={index}>
             <SkillBox {...skill} />
           </Grid>
         ))}
@@ -139,7 +157,7 @@ const SkillBox = ({
           transition={{ delay: 0.25, duration: 1.5 }}
           src={imageSrc}
           alt={alt}
-          style={{ width: "50%", maxWidth: "100%", height: "auto" }}
+          style={{ width: 100, height: 100, margin: 5 }}
         />
         <Typography sx={{ color: "#ebdddd", fontSize: 20 }}>{text}</Typography>
         <Box
