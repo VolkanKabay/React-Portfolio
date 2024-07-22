@@ -1,6 +1,8 @@
 import { Box, Container } from "@mui/material";
 import NavigationBar from "./NavigationBar";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
+import zIndex from "@mui/material/styles/zIndex";
 
 const Projects = () => {
   const projects = [
@@ -29,7 +31,7 @@ const Projects = () => {
         display: "flex",
         flexDirection: "column",
         marginTop: "2%",
-        height: "100vh",
+        height: "95%",
       }}
     >
       <NavigationBar />
@@ -102,6 +104,9 @@ const Projects = () => {
             </Box>
           </Box>
         ))}
+      </Box>
+      <Box sx={{ position: "relative", zIndex: 1, marginTop: 10 }}>
+        <Footer />
       </Box>
     </Container>
   );
