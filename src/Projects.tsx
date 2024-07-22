@@ -2,7 +2,6 @@ import { Box, Container } from "@mui/material";
 import NavigationBar from "./NavigationBar";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
-import zIndex from "@mui/material/styles/zIndex";
 
 const Projects = () => {
   const projects = [
