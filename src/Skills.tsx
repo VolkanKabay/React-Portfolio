@@ -62,6 +62,12 @@ const Skills = () => {
             rating: 3,
           },
           {
+            imageSrc: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg",
+            alt: "Git",
+            text: "Git",
+            rating: 3,
+          },
+          {
             imageSrc: "./mui.svg",
             alt: "Material-UI",
             text: "Material-UI",
@@ -79,12 +85,6 @@ const Skills = () => {
             alt: "Vitest",
             text: "Vitest",
             rating: 2,
-          },
-          {
-            imageSrc: "./threejs.svg",
-            alt: "Three.js",
-            text: "Three.js",
-            rating: 1,
           },
           {
             imageSrc: "./sql.svg",
