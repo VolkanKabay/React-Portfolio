@@ -90,7 +90,7 @@ const Skills = () => {
             imageSrc: "./sql.svg",
             alt: "SQL",
             text: "SQL",
-            rating: 1,
+            rating: 2,
           },
         ].map((skill, index) => (
           <Grid item xs={6} sm={3} md={3} key={index}>

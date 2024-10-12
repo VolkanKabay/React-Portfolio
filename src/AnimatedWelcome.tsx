@@ -1,6 +1,7 @@
 import { Box, useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
+import { Search } from "@mui/icons-material";
 const AnimatedWelcome = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -13,16 +14,18 @@ const AnimatedWelcome = () => {
     hidden: { opacity: 0, y: 0, scale: 0.8 },
     visible: {
       opacity: 1,
-      y: [0, -10, 10],
+      y: [0, -5, 5],
       scale: 1,
       transition: {
-        delay: 2.25,
+        delay: 3.5,
         duration: 0.8,
         ease: "easeInOut",
       },
     },
     hover: {
-      boxShadow: "0px 0px 8px #FF655B",
+      boxShadow: "0px 0px 8px 0px white",
+      delay: 0.1,
+      duration: 0.1,
     },
     tap: { scale: 0.95 },
   };
@@ -172,20 +175,29 @@ const AnimatedWelcome = () => {
         }}
         style={{
           width: "16rem",
+          fontWeight: "bold",
+          color: "black",
           margin: "auto",
-          marginBottom: "5rem",
-          padding: "1rem",
-          color: "white",
           height: "4rem",
-          border: "none",
-          fontSize: "1.4rem",
-          background: "linear-gradient(to right, #FD297B, #FF655B)",
-          borderRadius: "15px",
+          border: "1px solid white",
+          fontSize: "1.2rem",
+
+          borderRadius: "2rem",
           cursor: "pointer",
+          background: "#f5f5f5",
         }}
         className="animation-button"
       >
-        Discover my work
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "0.5rem",
+          }}
+        >
+          <Search /> Discover my work
+        </Box>
       </motion.button>
       <Footer />
     </>
