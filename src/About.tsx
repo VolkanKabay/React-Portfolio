@@ -27,6 +27,7 @@ const calculateAge = (birthDateString: string) => {
 const About = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  //* If you have copied this code from my repository, please replace the date below with your own birthdate.
   const age = calculateAge("2004-04-24");
 
   return (
