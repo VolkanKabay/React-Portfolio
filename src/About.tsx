@@ -10,9 +10,25 @@ import {
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
 
+const calculateAge = (birthDateString: string) => {
+  const birthDate = new Date(birthDateString);
+  const today = new Date();
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const hasBirthdayPassed =
+    today.getMonth() > birthDate.getMonth() ||
+    (today.getMonth() === birthDate.getMonth() &&
+      today.getDate() >= birthDate.getDate());
+  if (!hasBirthdayPassed) {
+    age -= 1;
+  }
+  return age;
+};
+
 const About = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const age = calculateAge("2004-04-24");
+
   return (
     <Container
       sx={{
@@ -37,7 +53,7 @@ const About = () => {
             variant="body1"
             sx={{ color: "#ebdddd", maxWidth: "75ch", mb: 2 }}
           >
-            I am a 20-year-old German Software Engineer passionate about
+            I am a {age}-year-old German Software Engineer passionate about
             developing web applications. I have experience with front-end
             development using React, Redux, TypeScript, and Material-UI.
             Currently improving my skills in frontend development and interested
