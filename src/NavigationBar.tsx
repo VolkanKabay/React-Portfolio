@@ -46,9 +46,9 @@ const NavigationBar = () => {
           >
             <Tooltip title="GitHub">
               <GitHub
-                onClick={() =>
-                  window.open("https://github.com/Volkankabay", "_blank")
-                }
+                onClick={() => {
+                  window.open("https://github.com/Volkankabay", "_blank");
+                }}
                 sx={{
                   color: "#ebdddd",
                   cursor: "pointer",
@@ -62,12 +62,12 @@ const NavigationBar = () => {
             </Tooltip>
             <Tooltip title="LinkedIn">
               <LinkedIn
-                onClick={() =>
+                onClick={() => {
                   window.open(
                     "https://de.linkedin.com/in/volkan-kabay-9b3579233",
                     "_blank"
-                  )
-                }
+                  );
+                }}
                 sx={{
                   color: "#ebdddd",
                   cursor: "pointer",

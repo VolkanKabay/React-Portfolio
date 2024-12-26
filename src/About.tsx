@@ -54,11 +54,15 @@ const About = () => {
             variant="body1"
             sx={{ color: "#ebdddd", maxWidth: "75ch", mb: 2 }}
           >
-            I am a {age}-year-old German Software Engineer passionate about
-            developing web applications. I have experience with front-end
-            development using React, Redux, TypeScript, and Material-UI.
-            Currently improving my skills in frontend development and interested
-            in backend development as well.
+            A dedicated and detail-oriented {age}-year-old Software Engineer
+            with expertise in front-end development, leveraging technologies
+            such as React, Redux, TypeScript, and Material-UI. Proficient in
+            managing the WordPress website for a small business, ensuring
+            seamless functionality and an optimized user experience.
+            Additionally, equipped with extensive experience in hardware
+            troubleshooting and maintenance, offering a well-rounded skill set
+            in IT and software development. Driven to continually expand
+            technical knowledge and contribute to impactful projects.
           </Typography>
         </Box>
 
@@ -122,14 +126,16 @@ const About = () => {
   );
 };
 
-const WorkExperience = ({
-  title,
-  date,
-  label,
-}: {
+interface WorkExperienceProps {
   title: string;
   date: string;
   label: string;
+}
+
+const WorkExperience: React.FC<WorkExperienceProps> = ({
+  title,
+  date,
+  label,
 }) => (
   <Box sx={{ mb: 4 }}>
     <Box
