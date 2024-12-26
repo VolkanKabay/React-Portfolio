@@ -54,6 +54,11 @@ const About = () => {
             Work Experience
           </Typography>
           <WorkExperience
+            title="WordPress Administrator for a small company"
+            date="01.2025 - present"
+            label="Wordpress / Part-time"
+          />
+          <WorkExperience
             title="Apprenticeship as IT-Specialist"
             date="09.2023 - present"
             label="Full-time"
