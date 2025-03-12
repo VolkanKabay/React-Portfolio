@@ -73,7 +73,7 @@ const Skills = () => {
             text: "Material-UI",
             rating: 3,
           },
-          { imageSrc: "./redux.svg", alt: "Redux", text: "Redux", rating: 2 },
+          { imageSrc: "./redux.svg", alt: "Redux", text: "Redux", rating: 3 },
           {
             imageSrc: "./javascript.svg",
             alt: "JavaScript",
@@ -90,7 +90,7 @@ const Skills = () => {
             imageSrc: "./sql.svg",
             alt: "SQL",
             text: "SQL",
-            rating: 2,
+            rating: 3,
           },
         ].map((skill, index) => (
           <Grid item xs={6} sm={3} md={3} key={index}>
