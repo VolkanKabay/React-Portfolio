@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "./firebase";
@@ -24,8 +24,8 @@ export const VisitorCount = () => {
 
 const Footer = () => {
   return (
-    <Box
-      sx={{
+    <div
+      style={{
         display: "flex",
         flexDirection: "column",
         textAlign: "center",
@@ -60,7 +60,7 @@ const Footer = () => {
       >
         © 2024 Volkan Kabay. All rights reserved.
       </Typography>
-    </Box>
+    </div>
   );
 };
 
