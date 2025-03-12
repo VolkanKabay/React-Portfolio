@@ -1,9 +1,14 @@
 import { Box, Typography, Link } from "@mui/material";
 import NavigationBar from "./NavigationBar";
+import { Helmet } from "react-helmet-async";
 
 const Disclaimer = () => {
   return (
     <Box className="impressum" p={3}>
+      <Helmet>
+        <meta name="robots" content="noindex, nofollow" />
+        <title>Impressum</title>
+      </Helmet>
       <NavigationBar />
       <Typography variant="h2" gutterBottom>
         Impressum
