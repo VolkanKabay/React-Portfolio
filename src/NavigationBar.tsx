@@ -1,6 +1,5 @@
 import {
   AppBar,
-  Box,
   Toolbar,
   Tooltip,
   useMediaQuery,
@@ -35,8 +34,8 @@ const NavigationBar = () => {
             alignItems: "center",
           }}
         >
-          <Box
-            sx={{
+          <div
+            style={{
               display: "flex",
               justifyContent: isMobile ? "center" : "start",
               marginTop: isMobile ? "0.5rem" : 0,
@@ -77,8 +76,8 @@ const NavigationBar = () => {
                 }}
               />
             </Tooltip>
-          </Box>
-          <Box sx={{ display: "flex", gap: "0.8rem" }}>
+          </div>
+          <div style={{ display: "flex", gap: "0.8rem" }}>
             <motion.a
               href="/"
               variants={linkVariants}
@@ -124,7 +123,7 @@ const NavigationBar = () => {
             >
               Contact
             </motion.a>
-          </Box>
+          </div>
         </Toolbar>
       </AppBar>
     </div>

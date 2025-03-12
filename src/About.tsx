@@ -1,5 +1,4 @@
 import {
-  Box,
   Chip,
   Container,
   Divider,
@@ -41,8 +40,15 @@ const About = () => {
       }}
     >
       <NavigationBar />
-      <Box sx={{ mt: 10, px: 2, marginLeft: isMobile ? "0" : "-1rem" }}>
-        <Box sx={{ mb: 4 }}>
+      <div
+        style={{
+          marginTop: 10,
+          paddingLeft: 2,
+          paddingRight: 2,
+          marginLeft: isMobile ? "0" : "-1rem",
+        }}
+      >
+        <div style={{ marginBottom: 4 }}>
           <Typography
             variant="h4"
             fontWeight={600}
@@ -64,9 +70,9 @@ const About = () => {
             in IT and software development. Driven to continually expand
             technical knowledge and contribute to impactful projects.
           </Typography>
-        </Box>
+        </div>
 
-        <Box sx={{ mb: 4 }}>
+        <div style={{ marginBottom: 4 }}>
           <Typography
             variant="h4"
             fontWeight={600}
@@ -99,9 +105,9 @@ const About = () => {
             date="10.2021 - 09.2022"
             label="Social Year"
           />
-        </Box>
+        </div>
 
-        <Box sx={{ mb: 4 }}>
+        <div style={{ marginBottom: 4 }}>
           <Typography
             variant="h4"
             fontWeight={600}
@@ -119,8 +125,8 @@ const About = () => {
             date="2021"
             label="School Certificate"
           />
-        </Box>
-      </Box>
+        </div>
+      </div>
       <Footer />
     </Container>
   );
@@ -137,9 +143,9 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
   date,
   label,
 }) => (
-  <Box sx={{ mb: 4 }}>
-    <Box
-      sx={{
+  <div style={{ marginBottom: 4 }}>
+    <div
+      style={{
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
@@ -153,7 +159,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
         variant="filled"
         sx={{ background: "#D7FFE0", color: "#1B5E20" }}
       />
-    </Box>
+    </div>
     <Typography
       variant="body1"
       sx={{ color: "#ebdddd", opacity: 0.7, fontSize: 14, mt: 1 }}
@@ -161,7 +167,7 @@ const WorkExperience: React.FC<WorkExperienceProps> = ({
       {date}
     </Typography>
     <Divider sx={{ mt: 2, backgroundColor: "#ebdddd", opacity: 0.4 }} />
-  </Box>
+  </div>
 );
 
 const Education = ({
@@ -173,9 +179,9 @@ const Education = ({
   date: string;
   label: string;
 }) => (
-  <Box sx={{ mb: 4 }}>
-    <Box
-      sx={{
+  <div style={{ marginBottom: 4 }}>
+    <div
+      style={{
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
@@ -189,7 +195,7 @@ const Education = ({
         variant="filled"
         sx={{ background: "#D7FFE0", color: "#1B5E20" }}
       />
-    </Box>
+    </div>
     <Typography
       variant="body2"
       sx={{ color: "#ebdddd", opacity: 0.7, fontSize: 14, mt: 1 }}
@@ -197,7 +203,7 @@ const Education = ({
       {date}
     </Typography>
     <Divider sx={{ mt: 2, backgroundColor: "#ebdddd", opacity: 0.4 }} />
-  </Box>
+  </div>
 );
 
 export default About;

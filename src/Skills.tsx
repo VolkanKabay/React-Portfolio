@@ -1,5 +1,4 @@
 import {
-  Box,
   Container,
   Divider,
   Grid,
@@ -62,7 +61,8 @@ const Skills = () => {
             rating: 3,
           },
           {
-            imageSrc: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg",
+            imageSrc:
+              "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.svg",
             alt: "Git",
             text: "Git",
             rating: 3,
@@ -100,7 +100,7 @@ const Skills = () => {
       </Grid>
       <Divider sx={{ backgroundColor: "#ebdddd" }} />
 
-      <Box sx={{ marginTop: "5%", marginBottom: "10%" }}>
+      <div style={{ marginTop: "5%", marginBottom: "10%" }}>
         <motion.div
           style={{
             color: "#ebdddd",
@@ -118,7 +118,7 @@ const Skills = () => {
           any of these technologies. But I'm trying to improve myself and learn
           new things about these technologies every day.
         </motion.div>
-      </Box>
+      </div>
       <Footer />
     </Container>
   );
@@ -141,8 +141,8 @@ const SkillBox = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <Box
-        sx={{
+      <div
+        style={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -160,8 +160,8 @@ const SkillBox = ({
           style={{ width: 100, height: 100, margin: 5 }}
         />
         <Typography sx={{ color: "#ebdddd", fontSize: 20 }}>{text}</Typography>
-        <Box
-          sx={{ display: "flex", alignItems: "center", marginTop: "0.5rem" }}
+        <div
+          style={{ display: "flex", alignItems: "center", marginTop: "0.5rem" }}
         >
           {Array.from({ length: 5 }, (_, index) =>
             index < rating ? (
@@ -170,8 +170,8 @@ const SkillBox = ({
               <StarBorderIcon key={index} sx={{ color: "#ebdddd" }} />
             )
           )}
-        </Box>
-      </Box>
+        </div>
+      </div>
     </motion.div>
   );
 };
