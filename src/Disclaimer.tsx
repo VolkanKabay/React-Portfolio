@@ -1,10 +1,15 @@
-import { Box, Typography, Link } from "@mui/material";
+import { Typography, Link } from "@mui/material";
 import NavigationBar from "./NavigationBar";
 import { Helmet } from "react-helmet-async";
 
 const Disclaimer = () => {
   return (
-    <Box className="impressum" p={3}>
+    <div
+      className="impressum"
+      style={{
+        padding: 3,
+      }}
+    >
       <Helmet>
         <meta name="robots" content="noindex, nofollow" />
         <title>Impressum</title>
@@ -105,7 +110,7 @@ const Disclaimer = () => {
         Falle der unverlangten Zusendung von Werbeinformationen, etwa durch
         Spam-Mails, vor.
       </Typography>
-    </Box>
+    </div>
   );
 };
 

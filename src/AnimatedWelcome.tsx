@@ -1,4 +1,4 @@
-import { Box, useMediaQuery, useTheme } from "@mui/material";
+import { useMediaQuery, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
 import Footer from "./Footer";
 import { Search } from "@mui/icons-material";
@@ -31,8 +31,8 @@ const AnimatedWelcome = () => {
   };
   return (
     <>
-      <Box
-        sx={{
+      <div
+        style={{
           display: "flex",
           flexDirection: isMobile ? "column" : "row",
           justifyContent: "space-between",
@@ -40,8 +40,8 @@ const AnimatedWelcome = () => {
           marginTop: isMobile ? "5%" : "10%",
         }}
       >
-        <Box
-          sx={{
+        <div
+          style={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "start",
@@ -145,7 +145,7 @@ const AnimatedWelcome = () => {
               </motion.span>
             ))}
           </motion.h2>
-        </Box>
+        </div>
         <motion.img
           initial={{ opacity: 0, x: 100 }}
           animate={{ opacity: 1, x: 0 }}
@@ -162,7 +162,7 @@ const AnimatedWelcome = () => {
               "0px 0px 10px 0px  linear-gradient(to right, #414345, #232526)",
           }}
         />
-      </Box>
+      </div>
 
       <motion.button
         variants={buttonVariants}
@@ -188,16 +188,15 @@ const AnimatedWelcome = () => {
         }}
         className="animation-button"
       >
-        <Box
-          sx={{
+        <div
+          style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            gap: "0.5rem",
           }}
         >
           <Search /> Discover my work
-        </Box>
+        </div>
       </motion.button>
       <Footer />
     </>
